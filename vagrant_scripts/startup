@@ -1,0 +1,3 @@
+sudo yum install -y nano
+sudo yum install -y vim
+sudo yum install -y git
