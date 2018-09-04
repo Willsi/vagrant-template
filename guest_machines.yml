@@ -10,8 +10,8 @@
   - unzip
   scripts:
   - startup
-  - google_cloud_sdk
-  - terraform
+  #- google_cloud_sdk
+  - docker
 - name: server
   box: centos/7
   cpus: 1
