@@ -14,7 +14,6 @@ Vagrant.configure(2) do |config|
       install_packages(guest, guest_vm)
       run_install_scripts(guest, guest_vm)
     end
-	config.vm.network "forwarded_port", guest: 80, host: 8080
   end
 end
 
