@@ -1,5 +1,5 @@
 ---
-- name: jenkins
+- name: alpha
   box: centos/7
   cpus: 1
   memory: 4096 
@@ -8,11 +8,13 @@
   packages:
   - wget
   - unzip
+  - zip
+  - nano
+  - git
+  - vim
   scripts:
-  - startup
-  #- google_cloud_sdk
-  - docker
-- name: server
+  #- startup
+- name: beta
   box: centos/7
   cpus: 1
   memory: 4096
@@ -21,23 +23,26 @@
   packages:
   - wget
   - unzip
+  - zip
+  - nano
+  - git
+  - vim
   scripts:
-  - startup
-  - docker
-- name: test
-  box: centos/7
+#  - startup
+- name: charlie
+  box: ubuntu/trusty64
   cpus: 1
   memory: 4096
   private_ip: 10.0.10.12
-  package_manager: yum
+  package_manager: apt
   packages:
   - wget
   - unzip
+  - zip
+  - nano
   - git
+  - vim
   scripts:
-  - startup
-  - docker
-  - jenkins
-  - run
+#  - startup
 ...
 

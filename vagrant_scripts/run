@@ -1,2 +1,0 @@
-sudo docker pull docker.io/willsi/python_$(date +%F)
-sudo docker run -d -it -p 9000:9000 docker.io/willsi/python_$(date +%F)
