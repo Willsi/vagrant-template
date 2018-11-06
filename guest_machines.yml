@@ -2,7 +2,8 @@
 - name: alpha
   box: centos/7
   cpus: 1
-  memory: 4096 
+  memory: 4096
+  gui: false 
   private_ip: 10.0.10.10
   package_manager: yum
   packages:
@@ -44,5 +45,17 @@
   - vim
   scripts:
 #  - startup
+- name: windows
+  box: sbrumley/windows10
+  cpus: 2
+  memory: 4096
+  gui: true
+  private_ip: 10.0.10.10
+  package_manager: yum
+  packages:
+#  - wget
+  scripts:
+  #- startup
+
 ...
 

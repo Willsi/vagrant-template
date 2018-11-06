@@ -7,6 +7,7 @@ Vagrant.configure(2) do |config|
     config.vm.define guest['name'] do |guest_vm|
       set_box(guest, guest_vm)
       set_cpus_and_memory(guest, guest_vm)
+      set_gui(guest, guest_vm)
       set_private_ip(guest, guest_vm)
       set_forwarded_ports(guest, guest_vm)
       set_synced_folders(guest, guest_vm)
@@ -21,6 +22,12 @@ def set_cpus_and_memory(guest, guest_vm)
   guest_vm.vm.provider "virtualbox" do |vb|
     vb.cpus = guest['cpus']
     vb.memory = guest['memory'] 
+  end
+end
+
+def set_gui(guest, guest_vm)
+  guest_vm.vm.provider "virtualbox" do |vb|
+    vb.gui = guest['gui']
   end
 end
 
