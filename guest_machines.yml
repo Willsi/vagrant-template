@@ -47,7 +47,7 @@
 #  - startup
 - name: windows
   box: sbrumley/windows10
-  cpus: 2
+  cpus: 1
   memory: 4096
   gui: true
   private_ip: 10.0.10.10
